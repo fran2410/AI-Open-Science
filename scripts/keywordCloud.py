@@ -26,7 +26,7 @@ def generate_cloud(text):
     output_dir = "../results"
     os.makedirs(output_dir, exist_ok=True)
 
-    print(text)
+    # print(text)
     wordcloud = WordCloud(width=800, height=400, background_color='white').generate(text)
     plt.figure(figsize=(10, 5))
     plt.imshow(wordcloud, interpolation='bilinear')

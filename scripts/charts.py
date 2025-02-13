@@ -15,9 +15,9 @@ def count_figures(xml_file):
     root = tree.getroot()
     figure_count = 0
     for elem in root.iter("{http://www.tei-c.org/ns/1.0}figure"):
-        print(elem, xml_file)
+        # print(elem, xml_file)
         figure_count += 1
-    print(figure_count, xml_file)
+    # print(figure_count, xml_file)
     return figure_count
 
 def generate_chart(figure_counts):

@@ -9,7 +9,7 @@ def extract_links(xml_file):
     '''
     :param: path to the xml file
     :return: list with the links in the xml file
-    '''
+    ''' 
     tree = ET.parse(xml_file)
     root = tree.getroot()
     links = []
