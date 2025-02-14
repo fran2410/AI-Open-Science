@@ -13,9 +13,7 @@ dependencies = [
     "wordcloud (>=1.9.4,<2.0.0)"
 ]
 
-[
-tool.poetry.group.test
-]
+[tool.poetry.group.test]
 optional = true
 dependencies = 
     pytest = "^7.0.0"
