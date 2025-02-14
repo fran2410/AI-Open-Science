@@ -31,11 +31,10 @@ jobs:
         python -m pip install --upgrade pip setuptools wheel
         poetry install
     
-    - name: Install test dependencies
+    - name: Build AI-Open-Science
       run: |
-        poetry install test
-    
-    - name: Run tests
+        pip install .[test]
+    - name: Test with pytest
       run: |
-        python -m pytest tests/ -v
+        pytest
    
