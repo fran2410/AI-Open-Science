@@ -33,7 +33,7 @@ jobs:
     
     - name: Build AI-Open-Science
       run: |
-        pip install .[tests]
+        pip install .[test]
     - name: Test with pytest
       run: |
         pytest
