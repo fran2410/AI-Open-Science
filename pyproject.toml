@@ -15,9 +15,9 @@ dependencies = [
 
 [tool.poetry.group.test]
 optional = true
-dependencies = 
+dependencies = [
     pytest = "^7.0.0"
-
+]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
