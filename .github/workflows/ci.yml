@@ -33,7 +33,7 @@ jobs:
     
     - name: Install test dependencies
       run: |
-        poetry install --with test
+        poetry install test
     
     - name: Run tests
       run: |
