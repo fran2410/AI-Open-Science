@@ -1,7 +1,7 @@
 [project]
 name = "ai-open-science"
 version = "0.1.0"
-description = "This repository provides tools for extracting and visualizing information from scientific papers in XML format. Using [GROBID](https://github.com/kermitt2/grobid). for document processing, the scripts generate keyword clouds, charts displaying the number of figures per document, and extract links from XML files."
+description = "This repository provides tools for extracting and visualizing information from scientific papers in XML format. Using for document processing, the scripts generate keyword clouds, charts displaying the number of figures per document, and extract links from XML files."
 authors = [
     {name = "fran2410",email = "franciscochicotemartin@gmail.com"}
 ]
@@ -19,3 +19,8 @@ test = ['pytest>=7.0.0, <9.0.0']
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+packages = [
+    { include = "scripts" }  
+]
