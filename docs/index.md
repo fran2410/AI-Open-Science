@@ -1,12 +1,13 @@
 
-[![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)  [![DOI](https://zenodo.org/badge/.svg)](https://zenodo.org/badge/latestdoi/)  
-[![Documentation Status](https://readthedocs.org/projects/ai-open-science/badge/?version=latest)](https://readthedocs.org/projects/ai-open-science/?badge=latest)
-[![GitHub release](https://img.shields.io/github/release/fran2410/AI-Open-Science.svg)](https://github.com/fran2410/AI-Open-Science/releases/)
+[![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)  [![DOI](https://zenodo.org/badge/.svg)](https://zenodo.org/badge/latestdoi/)  [![Documentation Status](https://readthedocs.org/projects/ai-open-science/badge/?version=latest)](https://readthedocs.org/projects/ai-open-science/?badge=latest)[![GitHub release](https://img.shields.io/github/release/fran2410/AI-Open-Science.svg)](https://github.com/fran2410/AI-Open-Science/releases/)
 
 
 ## Description
 
 This repository provides tools for extracting and visualizing information from scientific papers in XML format. Using [GROBID](https://github.com/kermitt2/grobid). for document processing, the scripts generate keyword clouds, charts displaying the number of figures per document, and extract links from XML files.
+
+!!! info
+    For any issues or questions, please open an issue in the [project issues](https://github.com/fran2410/AI-Open-Science/issues).
 
 ## Features
 Given a XML file (or a directory with some of them) the tool will extract the data and make:

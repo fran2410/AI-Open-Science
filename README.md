@@ -1,12 +1,16 @@
 # AI-Open-Science
 
-[![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)  [![DOI](https://zenodo.org/badge/.svg)](https://zenodo.org/badge/latestdoi/)  
-[![Documentation Status](https://readthedocs.org/projects/ai-open-science/badge/?version=latest)](https://readthedocs.org/projects/ai-open-science/?badge=latest)
-[![GitHub release](https://img.shields.io/github/release/fran2410/AI-Open-Science.svg)](https://github.com/fran2410/AI-Open-Science/releases/)
+[![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)  [![DOI](https://zenodo.org/badge/.svg)](https://zenodo.org/badge/latestdoi/)  [![Documentation Status](https://readthedocs.org/projects/ai-open-science/badge/?version=latest)](https://readthedocs.org/projects/ai-open-science/?badge=latest)[![GitHub release](https://img.shields.io/github/release/fran2410/AI-Open-Science.svg)](https://github.com/fran2410/AI-Open-Science/releases/)
 
 ## Description
 
 This repository provides tools for extracting and visualizing information from scientific papers in XML format. Using [GROBID](https://github.com/kermitt2/grobid). for document processing, the scripts generate keyword clouds, charts displaying the number of figures per document, and extract links from XML files.
+
+## Features
+Given a XML file (or a directory with some of them) the tool will extract the data and make:
+- **Keyword Cloud**: Keyword cloud based on the abstract information.
+- **Charts**: Charts visualization showing the number of figures per article.
+- **Links**: list of the links found in each paper while ignoring references.
 
 ## Project Structure
 
@@ -21,33 +25,54 @@ This repository provides tools for extracting and visualizing information from s
 ├── documentation/  # Additional documentation 
 ```
 
-## Requirements
+# Prerequisites
 
-### Dependencies
+Make sure you have the following installed:
+- [Conda](https://docs.conda.io/en/latest/miniconda.html) (Miniconda or Anaconda)
+- [Poetry](https://python-poetry.org/docs/#installation)
 
-Ensure you have the required dependencies installed:
-```bash
-pip install -r requirements.txt
-```
+# Installation
 
-### XML Processing with GROBID
-
-This repository contains scripts and data for processing XML files extracted from research papers using [GROBID](https://github.com/kermitt2/grobid).  
-
-## Installation
-
-1. Clone the repository:
+##  Clone the repository:
    ```bash
    git clone https://github.com/fran2410/AI-Open-Science.git
    cd AI-Open-Science
    ```
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-## Usage
+## Conda
 
-### 1. Generate Keyword Cloud  
+#### Create and activate the Conda environment
+```bash
+conda create -n ai-open-science python=3.13 
+conda activate ai-open-science
+```
+
+## Poetry
+
+#### 1. Install Poetry
+If you don’t have Poetry installed, run:
+```bash
+pip install poetry
+```
+
+#### 2. Install project dependencies
+Run the following command in the root of the repository to install dependencies:
+```bash
+poetry install
+```
+
+## Activate enviroment
+Activate the enviroment to start working:
+```bash
+conda activate ai-open-science
+```
+
+## Verify installation
+You can check if everything is correctly installed by running:
+```bash
+python -c "import matplotlib, wordcloud; print('Installation successful')"
+```
+
+## Generate Keyword Cloud  
 Extracts keywords from abstracts in XML files and creates a word cloud.
 
 **Command:**
@@ -56,7 +81,7 @@ python scripts/keywordCloud.py <folder_with_xmls>
 ```
 **Output:** `results/keywordCloud.jpg`
 
-### 2. Chart Figures Count  
+## Chart Figures Count  
 Counts the number of figures in each XML file and generates a bar chart.
 
 **Command:**
@@ -65,7 +90,7 @@ python scripts/charts.py <folder_with_xmls>
 ```
 **Output:** `results/charts.jpg`
 
-### 3. Extract Links  
+## Extract Links  
 Extracts links from XML files while ignoring references.
 
 **Command:**

@@ -6,6 +6,8 @@ import matplotlib.pyplot as plt
 # This script process the figures of the xml files and gives a chart whitn the number of it.
 # It can process a sigle file or all the files in a folder.
 
+titulos = []
+
 def count_figures(xml_file):
     '''
     :param: path to the xml file
@@ -36,10 +38,11 @@ def generate_chart(figure_counts):
     output_path = os.path.join(output_dir, "charts.jpg")
     plt.savefig(output_path, format='jpeg', dpi=300, bbox_inches='tight')
 
-    plt.show()
+    print(f"Chart saved in {output_path}")
 
 
 def process_files(path):
+    titulos = []
     figure_counts = []
     if os.path.isfile(path):
         titulos.append(path)
@@ -62,6 +65,5 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Use: python charts.py <folder_with_xmls>")
         sys.exit(1)
-    titulos = []
     path = sys.argv[1]
     process_files(path)

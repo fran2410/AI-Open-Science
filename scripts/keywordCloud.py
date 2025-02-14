@@ -26,7 +26,7 @@ def generate_cloud(text):
     output_dir = "../results"
     os.makedirs(output_dir, exist_ok=True)
 
-    # print(text)
+    
     wordcloud = WordCloud(width=800, height=400, background_color='white').generate(text)
     plt.figure(figsize=(10, 5))
     plt.imshow(wordcloud, interpolation='bilinear')
@@ -35,7 +35,7 @@ def generate_cloud(text):
     output_path = os.path.join(output_dir, "keywordCloud.jpg")
     plt.savefig(output_path, format='jpeg', dpi=300, bbox_inches='tight')
 
-    plt.show()
+    print(f"Chart saved in {output_path}")
 
 def process(path):
     if os.path.isfile(path):
