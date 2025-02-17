@@ -22,15 +22,17 @@ Given a XML file (or a directory with some of them) the tool will extract the da
 
 ## Project Structure
 
+
 ```
-├── papers/         # Original research papers
-├── data/           # XML files 
-├── scripts/        # Python scripts for data extraction and visualization
+├── papers/              # Original research papers
+├── data/                # XML files 
+├── scripts/             # Python scripts for data extraction and visualization
 │   ├── keywordCloud.py  # Generates a keyword cloud from abstracts
 │   ├── charts.py        # Creates charts showing the number of figures per document
 │   ├── list.py          # Extracts links from XML files (excluding references)
-├── results/        # Output directory for generated files
-├── documentation/  # Additional documentation 
+├── results/             # Output directory for generated files
+├── docs/                # Additional documentation 
+├── tests/               # Tests to check functionality 
 ```
 
 ## Used Technologies and Standards
