@@ -1,6 +1,28 @@
 # Rationale
 
 This document explains the validation process carried out on the 10 test articles located in the `papers` folder.
+This process ensured the reliability of the extracted and validated data in the AI-Open-Science project.
+
+## Testing
+
+A test suite has been implemented using unittest to verify the correctness of the scripts. The tests cover:
+
+- Figure counting accuracy
+
+- Abstract keyword extraction
+
+- Link extraction while ignoring references
+
+- Link filtering and cleaning logic
+
+- Handling of multiple files and empty directories
+
+**Running Tests**
+
+To execute the test suite, run:
+```bash
+python -m unittest tests/tests_01.py
+```
 
 ## Validation of the Keyword Cloud
 For the generation of the keyword cloud, the following steps were followed:
@@ -19,5 +41,5 @@ To verify that the number of extracted figures and links was correct, the follow
 4. The extracted links were verified to ensure correctness and that they did not include bibliographic references.
 
 
-This process ensured the reliability of the extracted and validated data in the AI-Open-Science project.
+
 

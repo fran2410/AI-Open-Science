@@ -1,7 +1,10 @@
 # AI-Open-Science
 
-[![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)  [![DOI](https://zenodo.org/badge/927066469.svg)](https://doi.org/10.5281/zenodo.14882666)
-  [![Documentation Status](https://readthedocs.org/projects/ai-open-science/badge/?version=latest)](https://readthedocs.org/projects/ai-open-science/?badge=latest)[![GitHub release](https://img.shields.io/github/release/fran2410/AI-Open-Science.svg)](https://github.com/fran2410/AI-Open-Science/releases/)
+[![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
+[![Python](https://img.shields.io/badge/python-3.13-blue)](https://www.python.org/) 
+[![DOI](https://zenodo.org/badge/927066469.svg)](https://doi.org/10.5281/zenodo.14882666) 
+[![Documentation Status](https://readthedocs.org/projects/ai-open-science/badge/?version=latest)](https://readthedocs.org/projects/ai-open-science/?badge=latest) 
+[![GitHub release](https://img.shields.io/github/release/fran2410/AI-Open-Science.svg)](https://github.com/fran2410/AI-Open-Science/releases/)
 
 ## Description
 
@@ -16,14 +19,15 @@ Given a XML file (or a directory with some of them) the tool will extract the da
 ## Project Structure
 
 ```
-├── papers/         # Original research papers
-├── data/           # XML files 
-├── scripts/        # Python scripts for data extraction and visualization
+├── papers/              # Original research papers
+├── data/                # XML files 
+├── scripts/             # Python scripts for data extraction and visualization
 │   ├── keywordCloud.py  # Generates a keyword cloud from abstracts
 │   ├── charts.py        # Creates charts showing the number of figures per document
 │   ├── list.py          # Extracts links from XML files (excluding references)
-├── results/        # Output directory for generated files
-├── documentation/  # Additional documentation 
+├── results/             # Output directory for generated files
+├── docs/                # Additional documentation 
+├── tests/               # Tests to check functionality 
 ```
 
 # Prerequisites
