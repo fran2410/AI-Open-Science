@@ -12,7 +12,7 @@ class TestAIOpenScience(unittest.TestCase):
     def setUp(self):
         # Create a temporary directory for test files
         self.test_dir = tempfile.mkdtemp()
-        
+        self.output_dir = tempfile.mkdtemp()
         # Create sample XML content
         self.sample_xml = '''<?xml version="1.0" encoding="UTF-8"?>
         <TEI xmlns="http://www.tei-c.org/ns/1.0">
@@ -78,13 +78,13 @@ class TestAIOpenScience(unittest.TestCase):
     @patch('matplotlib.pyplot.savefig')
     def test_charts_generation(self, mock_savefig):
         """Test if charts are generated without errors"""
-        process_charts(self.test_file)
+        process_charts(self.test_file, self.output_dir)
         mock_savefig.assert_called_once()
         
     @patch('matplotlib.pyplot.savefig')
     def test_wordcloud_generation(self, mock_savefig):
         """Test if word cloud is generated without errors"""
-        process_cloud(self.test_file)
+        process_cloud(self.test_file, self.output_dir)
         mock_savefig.assert_called_once()
 
     def test_multiple_files_processing(self):
@@ -109,7 +109,7 @@ class TestAIOpenScience(unittest.TestCase):
     def test_empty_directory(self):
         """Test processing an empty directory"""
         empty_dir = tempfile.mkdtemp()
-        process_charts(empty_dir)  # Should not raise any errors
+        process_charts(empty_dir, self.output_dir)  # Should not raise any errors
         os.rmdir(empty_dir)
 
 if __name__ == '__main__':

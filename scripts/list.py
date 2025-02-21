@@ -47,7 +47,7 @@ def clean_link(link):
         link = link[:-1]
     return link
 
-def process_files(path):
+def process_files(path, output_dir):
     linkList = []
     if os.path.isfile(path):
         links = extract_links(path)
@@ -78,4 +78,4 @@ if __name__ == "__main__":
 
     path = sys.argv[1]    
     output_dir = "{sys.argv[2]}/links.txt"
-    process_files(path)
+    process_files(path, output_dir)
