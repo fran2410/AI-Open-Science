@@ -48,6 +48,7 @@ def clean_link(link):
     return link
 
 def process_files(path, output_dir):
+    os.makedirs(output_dir, exist_ok=True)
     linkList = []
     if os.path.isfile(path):
         links = extract_links(path)
@@ -64,11 +65,11 @@ def process_files(path, output_dir):
                     linkList.append(link)
     else:
         print("Invalid path provided.")
-    
-    with open(output_dir, "w", encoding="utf-8") as f:
+    output_path = os.path.join(output_dir, "links.txt")
+    with open(output_path, "w", encoding="utf-8") as f:
         for item in linkList:
             f.write(item + "\n")
-    print(f"Links saved in {output_dir}")
+    print(f"Links saved in {output_path}")
     
 if __name__ == "__main__":
 # Check ih the user provided enough arguments
@@ -77,5 +78,5 @@ if __name__ == "__main__":
         sys.exit(1)
 
     path = sys.argv[1]    
-    output_dir = "{sys.argv[2]}/links.txt"
+    output_dir = sys.argv[2]
     process_files(path, output_dir)
