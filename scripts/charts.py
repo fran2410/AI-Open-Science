@@ -22,7 +22,7 @@ def count_figures(xml_file):
     # print(figure_count, xml_file)
     return figure_count
 
-def generate_chart(figure_counts):
+def generate_chart(figure_counts, output_dir):
     os.makedirs(output_dir, exist_ok=True)
 
     bars = plt.bar(range(len(figure_counts)), figure_counts, tick_label=[str(i+1) for i in range(len(figure_counts))])
@@ -39,20 +39,20 @@ def generate_chart(figure_counts):
     print(f"Chart saved in {output_path}")
 
 
-def process_files(path):
+def process_files(path, output_dir):
     titulos = []
     figure_counts = []
     if os.path.isfile(path):
         titulos.append(path)
         figure_counts.append(count_figures(path))
-        generate_chart(figure_counts)
+        generate_chart(figure_counts, output_dir)
     elif os.path.isdir(path):
         for filename in os.listdir(path):
             titulos.append(filename)
             if filename.endswith(".xml"):
                 filepath = os.path.join(path, filename)
                 figure_counts.append(count_figures(filepath))
-        generate_chart(figure_counts)
+        generate_chart(figure_counts, output_dir)
     else:
         print("Invalid path provided.")
         return
@@ -66,4 +66,4 @@ if __name__ == "__main__":
 
     path = sys.argv[1]    
     output_dir = sys.argv[2]
-    process_files(path)
+    process_files(path, output_dir)

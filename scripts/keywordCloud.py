@@ -21,7 +21,7 @@ def extract_abstract(xml_file):
             abstract += p.text + " "
     return abstract
 
-def generate_cloud(text):
+def generate_cloud(text, output_dir):
 
     os.makedirs(output_dir, exist_ok=True)
     
@@ -35,17 +35,17 @@ def generate_cloud(text):
 
     print(f"Chart saved in {output_path}")
 
-def process(path):
+def process(path, output_dir):
     if os.path.isfile(path):
         abstract = extract_abstract(path)
-        generate_cloud(abstract)
+        generate_cloud(abstract, output_dir)
     elif os.path.isdir(path):
         all_abstracts = ""
         for filename in os.listdir(path):
             if filename.endswith(".xml"):
                 filepath = os.path.join(path, filename)
                 all_abstracts += extract_abstract(filepath)
-        generate_cloud(all_abstracts)
+        generate_cloud(all_abstracts, output_dir)
     else:
         print("Invalid path provided.")
 
@@ -57,4 +57,4 @@ if __name__ == "__main__":
 
     path = sys.argv[1]    
     output_dir = sys.argv[2]
-    process(path)
+    process(path, output_dir)
