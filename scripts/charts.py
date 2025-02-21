@@ -23,8 +23,6 @@ def count_figures(xml_file):
     return figure_count
 
 def generate_chart(figure_counts):
-    i = 0
-    output_dir = "../results"
     os.makedirs(output_dir, exist_ok=True)
 
     bars = plt.bar(range(len(figure_counts)), figure_counts, tick_label=[str(i+1) for i in range(len(figure_counts))])
@@ -63,7 +61,9 @@ def process_files(path):
 if __name__ == "__main__":
     # Check ih the user provided enough arguments
     if len(sys.argv) < 2:
-        print("Use: python charts.py <folder_with_xmls>")
+        print("Use: python charts.py <folder_with_xmls> <output_folder>")
         sys.exit(1)
-    path = sys.argv[1]
+
+    path = sys.argv[1]    
+    output_dir = sys.argv[2]
     process_files(path)

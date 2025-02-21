@@ -24,13 +24,13 @@ Given a XML file (or a directory with some of them) the tool will extract the da
 
 
 ```
-├── papers/              # Original research papers
-├── data/                # XML files 
+├── papers/              # Example research papers
+├── data/                # Example XML files 
 ├── scripts/             # Python scripts for data extraction and visualization
 │   ├── keywordCloud.py  # Generates a keyword cloud from abstracts
 │   ├── charts.py        # Creates charts showing the number of figures per document
 │   ├── list.py          # Extracts links from XML files (excluding references)
-├── results/             # Output directory for generated files
+├── results/             # Example directory for generated files
 ├── docs/                # Additional documentation 
 ├── tests/               # Tests to check functionality 
 ```

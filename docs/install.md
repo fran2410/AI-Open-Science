@@ -2,7 +2,7 @@
 # Prerequisites
 
 Make sure you have the following installed:
-- [Conda](https://docs.conda.io/en/latest/miniconda.html) (Miniconda or Anaconda)
+- [Conda](https://docs.conda.io/en/latest/miniconda.html) 
 - [Poetry](https://python-poetry.org/docs/#installation)
 
 # Installation

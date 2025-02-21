@@ -23,9 +23,7 @@ def extract_abstract(xml_file):
 
 def generate_cloud(text):
 
-    output_dir = "../results"
     os.makedirs(output_dir, exist_ok=True)
-
     
     wordcloud = WordCloud(width=800, height=400, background_color='white').generate(text)
     plt.figure(figsize=(10, 5))
@@ -53,9 +51,10 @@ def process(path):
 
 if __name__ == "__main__":
     # Check ih the user provided enough arguments
-    if len(sys.argv) < 2:
-        print("Use: python keywordCloud.py <folder_with_xmls>")
+    if len(sys.argv) < 3:
+        print("Use: python keywordCloud.py <folder_with_xmls> <output_folder>")
         sys.exit(1)
 
     path = sys.argv[1]    
+    output_dir = sys.argv[2]
     process(path)

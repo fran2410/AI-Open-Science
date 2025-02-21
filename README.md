@@ -19,13 +19,13 @@ Given a XML file (or a directory with some of them) the tool will extract the da
 ## Project Structure
 
 ```
-├── papers/              # Original research papers
-├── data/                # XML files 
+├── papers/              # Example research papers
+├── data/                # Example XML files 
 ├── scripts/             # Python scripts for data extraction and visualization
 │   ├── keywordCloud.py  # Generates a keyword cloud from abstracts
 │   ├── charts.py        # Creates charts showing the number of figures per document
 │   ├── list.py          # Extracts links from XML files (excluding references)
-├── results/             # Output directory for generated files
+├── results/             # Example directory for generated files
 ├── docs/                # Additional documentation 
 ├── tests/               # Tests to check functionality 
 ```
@@ -33,7 +33,7 @@ Given a XML file (or a directory with some of them) the tool will extract the da
 # Prerequisites
 
 Make sure you have the following installed:
-- [Conda](https://docs.conda.io/en/latest/miniconda.html) (Miniconda or Anaconda)
+- [Conda](https://docs.conda.io/en/latest/miniconda.html) 
 - [Poetry](https://python-poetry.org/docs/#installation)
 
 # Installation
@@ -82,27 +82,27 @@ Extracts keywords from abstracts in XML files and creates a word cloud.
 
 **Command:**
 ```bash
-python scripts/keywordCloud.py <folder_with_xmls>
+python scripts/keywordCloud.py <folder_with_xmls <output_folder>>
 ```
-**Output:** `results/keywordCloud.jpg`
+**Output:** `<output_folder>/keywordCloud.jpg`
 
 ## Chart Figures Count  
 Counts the number of figures in each XML file and generates a bar chart.
 
 **Command:**
 ```bash
-python scripts/charts.py <folder_with_xmls>
+python scripts/charts.py <folder_with_xmls <output_folder>>
 ```
-**Output:** `results/charts.jpg`
+**Output:** `<output_folder>/charts.jpg`
 
 ## Extract Links  
 Extracts links from XML files while ignoring references.
 
 **Command:**
 ```bash
-python scripts/list.py <folder_with_xmls>
+python scripts/list.py <folder_with_xmls <output_folder>>
 ```
-**Output:** `results/links.txt`
+**Output:** `<output_folder>/links.txt`
 
 ## Examples
 

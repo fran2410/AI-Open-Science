@@ -65,17 +65,17 @@ def process_files(path):
     else:
         print("Invalid path provided.")
     
-    output_path = "../results/links.txt"
-    with open(output_path, "w", encoding="utf-8") as f:
+    with open(output_dir, "w", encoding="utf-8") as f:
         for item in linkList:
             f.write(item + "\n")
-    print(f"Links saved in {output_path}")
+    print(f"Links saved in {output_dir}")
     
 if __name__ == "__main__":
 # Check ih the user provided enough arguments
     if len(sys.argv) < 2:
-        print("Use: python list.py <folder_with_xmls>")
+        print("Use: python list.py <folder_with_xmls> <output_folder>")
         sys.exit(1)
 
     path = sys.argv[1]    
+    output_dir = "{sys.argv[2]}/links.txt"
     process_files(path)

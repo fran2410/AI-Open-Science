@@ -17,7 +17,7 @@
         "Python"
     ],
     "softwareRequirements": [
-        "Make sure you have the following installed:\n- [Conda](https://docs.conda.io/en/latest/miniconda.html) (Miniconda or Anaconda)\n- [Poetry](https://python-poetry.org/docs/#installation)\n",
+        "Make sure you have the following installed:\n- [Conda](https://docs.conda.io/en/latest/miniconda.html) \n- [Poetry](https://python-poetry.org/docs/#installation)\n",
         "Run the following command in the root of the repository to install dependencies:\n```bash\npoetry install\n```\n"
     ],
     "releaseNotes": "First stable release of AI-Open-Science, a tool for extracting and visualizing data from scientific papers in XML format. This version includes keyword cloud generation, figure count analysis, and link extraction, leveraging GROBID for document processing.\r\n\r\n**Full Changelog**: https://github.com/fran2410/AI-Open-Science/commits/0.1.0",
