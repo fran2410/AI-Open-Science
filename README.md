@@ -86,6 +86,31 @@ docker run -it --rm -v $PWD/:/out ai-open-science
 ```
 If you move any files produced by the scripts or set the output folder to `/out`, you will be able to see them in your current directory.
 
+# USAGE
+## Using GROBID for XML Extraction
+To extract structured XML data from PDFs using [GROBID](https://github.com/kermitt2/grobid), follow these steps:
+
+1. Start the [GROBID](https://github.com/kermitt2/grobid) container
+Run the following command to launch a [GROBID](https://github.com/kermitt2/grobid) server using Docker:
+
+```bash
+docker run --rm -p 8070:8070 lfoppiano/grobid:latest-full
+```
+This will start the [GROBID](https://github.com/kermitt2/grobid) service on port 8070.
+
+2. Process PDFs with [GROBID](https://github.com/kermitt2/grobid)
+Once the [GROBID](https://github.com/kermitt2/grobid) server is running, you can extract XML from a folder of PDFs using the following command:
+
+```bash
+curl -F input=@<path_to_pdf> "http://localhost:8070/api/processFulltextDocument" -o <output_xml>
+```
+Alternatively, for batch processing of all PDFs in a directory:
+
+```bash
+for file in <pdf_folder>/*.pdf; do
+    curl -F input=@$file "http://localhost:8070/api/processFulltextDocument" -o "<output_folder>/$(basename "$file" .pdf).xml"
+done
+```
 ## Generate Keyword Cloud  
 Extracts keywords from abstracts in XML files and creates a word cloud.
 
