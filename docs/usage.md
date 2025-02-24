@@ -1,5 +1,3 @@
-
-
 ## Generate Keyword Cloud  
 Extracts keywords from abstracts in XML files and creates a word cloud.
 
@@ -14,7 +12,7 @@ Counts the number of figures in each XML file and generates a bar chart.
 
 **Command:**
 ```bash
-python scripts/charts.py <folder_with_xmls> <output_folder> 
+python scripts/charts.py <folder_with_xmls> <output_folder>
 ```
 **Output:** `<output_folder>/charts.jpg`
 

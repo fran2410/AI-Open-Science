@@ -5,7 +5,7 @@ Make sure you have the following installed:
 - [Conda](https://docs.conda.io/en/latest/miniconda.html) 
 - [Poetry](https://python-poetry.org/docs/#installation)
 
-# Installation
+# Installing fron Github
 
 ##  Clone the repository:
    ```bash
@@ -34,16 +34,23 @@ Run the following command in the root of the repository to install dependencies:
 poetry install
 ```
 
-## Activate enviroment
-Activate the enviroment to start working:
+# Installing through Docker
+
+We provide a Docker image with the scripts already installed. To run through Docker, you may build the Dockerfile provided in the repository by running:
+
 ```bash
-conda activate ai-open-science
+docker build -t ai-open-science .
 ```
 
-## Verify installation
-You can check if everything is correctly installed by running:
+Then, to run your image just type:
+
 ```bash
-python -c "import matplotlib, wordcloud; print('Installation successful')"
+docker run --rm -it  ai-open-science
 ```
 
+And you will be ready to use the scripts (see section below). If you want to have access to the results we recommend [mounting a volume](https://docs.docker.com/storage/volumes/). For example, the following command will mount the current directory as the `out` folder in the Docker image:
 
+```bash
+docker run -it --rm -v $PWD/:/out ai-open-science 
+```
+If you move any files produced by the scripts or set the output folder to `/out`, you will be able to see them in your current directory.
