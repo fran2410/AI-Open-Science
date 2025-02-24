@@ -3,7 +3,7 @@
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 [![Python](https://img.shields.io/badge/python-3.13-blue)](https://www.python.org/) 
 [![DOI](https://zenodo.org/badge/927066469.svg)](https://doi.org/10.5281/zenodo.14882666) 
-[![Documentation Status](https://readthedocs.org/projects/ai-open-science/badge/?version=latest)](https://readthedocs.org/projects/ai-open-science/?badge=latest) 
+[![Documentation Status](https://readthedocs.org/projects/ai-open-science/badge/?version=latest)](https://ai-open-science.readthedocs.io/en/latest/) 
 [![GitHub release](https://img.shields.io/github/release/fran2410/AI-Open-Science.svg)](https://github.com/fran2410/AI-Open-Science/releases/)
 
 ## Description
