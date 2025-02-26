@@ -33,7 +33,7 @@ def generate_cloud(text, output_dir):
     output_path = os.path.join(output_dir, "keywordCloud.jpg")
     plt.savefig(output_path, format='jpeg', dpi=300, bbox_inches='tight')
 
-    print(f"Chart saved in {output_path}")
+    print(f"Keyword Cloud saved in {output_path}")
 
 def process(path, output_dir):
     if os.path.isfile(path):

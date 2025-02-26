@@ -30,12 +30,6 @@ Given a XML file (or a directory with some of them) the tool will extract the da
 ├── tests/               # Tests to check functionality 
 ```
 
-# Prerequisites
-
-Make sure you have the following installed:
-- [Conda](https://docs.conda.io/en/latest/miniconda.html) 
-- [Poetry](https://python-poetry.org/docs/#installation)
-
 # Installing fron Github
 
 ##  Clone the repository:
@@ -43,7 +37,9 @@ Make sure you have the following installed:
    git clone https://github.com/fran2410/AI-Open-Science.git
    cd AI-Open-Science
    ```
-## Conda
+## 1. Conda
+
+For installing Conda on your system, please visit the official Conda documentation [here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html).
 
 #### Create and activate the Conda environment
 ```bash
@@ -51,15 +47,11 @@ conda create -n ai-open-science python=3.13
 conda activate ai-open-science
 ```
 
-## Poetry
+## 2. Poetry
 
-#### 1. Install Poetry
-If you don’t have Poetry installed, run:
-```bash
-pip install poetry
-```
+For installing Poetry on your system, please visit the official Poetry documentation [here](https://python-poetry.org/docs/#installation).
 
-#### 2. Install project dependencies
+#### Install project dependencies
 Run the following command in the root of the repository to install dependencies:
 ```bash
 poetry install
@@ -82,9 +74,9 @@ docker run --rm -it  ai-open-science
 And you will be ready to use the scripts (see section below). If you want to have access to the results we recommend [mounting a volume](https://docs.docker.com/storage/volumes/). For example, the following command will mount the current directory as the `out` folder in the Docker image:
 
 ```bash
-docker run -it --rm -v $PWD/:/out ai-open-science 
+docker run -it --rm -v $PWD/out:/AI-Open-Science/out ai-open-science 
 ```
-If you move any files produced by the scripts or set the output folder to `/out`, you will be able to see them in your current directory.
+If you move any files produced by the scripts or set the output folder to `/out`, you will be able to see them in your current directory in the `/out` folder.
 
 # USAGE
 ## Using GROBID for XML Extraction
