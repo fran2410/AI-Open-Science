@@ -1,6 +1,6 @@
 # Rationale
 
-This document explains the validation process carried out on the 10 test articles located in the `papers` folder, transformed into XML files using [GROBID](https://github.com/kermitt2/grobid), stored in `data`, and analyzed with the results presented in `results`.
+This document explains the validation process carried out on the 10 test articles that we located in the `papers` folder, transformed into XML files using [GROBID](https://github.com/kermitt2/grobid), stored in `data`, and analyzed with the results presented in `results`.
 This process ensured the reliability of the extracted and validated data in the AI-Open-Science project.
 
 

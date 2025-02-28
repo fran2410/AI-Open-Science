@@ -1,3 +1,4 @@
+You can use any folder to store the PDFs to be processed and any other to extract the results. They don’t have to be specifically named `paper`, `data`, or `results`; you just need to specify them when running the commands.
 
 ## Using GROBID for XML Extraction
 To extract structured XML data from PDFs using [GROBID](https://github.com/kermitt2/grobid), follow these steps:

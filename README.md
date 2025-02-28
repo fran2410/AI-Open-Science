@@ -79,6 +79,7 @@ docker run -it --rm -v $PWD/out:/AI-Open-Science/out ai-open-science
 If you move any files produced by the scripts or set the output folder to `/out`, you will be able to see them in your current directory in the `/out` folder.
 
 # USAGE
+You can use any folder to store the PDFs to be processed and any other to extract the results. They don’t have to be specifically named `paper`, `data`, or `results`; you just need to specify them when running the commands.
 ## Using GROBID for XML Extraction
 To extract structured XML data from PDFs using [GROBID](https://github.com/kermitt2/grobid), follow these steps:
 
@@ -94,7 +95,7 @@ This will start the [GROBID](https://github.com/kermitt2/grobid) service on port
 Once the [GROBID](https://github.com/kermitt2/grobid) server is running, you can extract XML from a folder of PDFs using the following command:
 
 ```bash
-curl -F input=@<path_to_pdf> "http://localhost:8070/api/processFulltextDocument" -o <output_xml>
+curl -F input=@<folder_with_pdf> "http://localhost:8070/api/processFulltextDocument" -o <output_xml>
 ```
 Alternatively, for batch processing of all PDFs in a directory:
 
